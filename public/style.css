@@ -1,0 +1,93 @@
+/* public/style.css*/
+/* Reset básico e fontes */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* * DESIGN MOBILE-FIRST:* Estilizamos o container para telas pequenas primeiro.* Ele ocupa 100% da largura.*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Tamanho bom para mobile */
+}
+
+main {
+    padding: 20px;
+} 
+
+/** ESTA É A MÁGICA PARA MOBILE:* Botões de voto grandes e fáceis de tocar.*/
+
+.opcoes button {
+    display: block; /* Faz o botão ocupar a linha inteira */
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.opcoes button:hover {
+    background-color: #218838;
+}
+
+/* Resultados */
+
+.resultados h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.resultados-item {
+    display: flex;
+    justify-content: space-between; /* Nome da opção de um lado, votos do outro */
+    padding: 10px 5px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.resultados-item span {
+    font-weight: bold;
+}
+
+/* * MEDIA QUERY PARA DESKTOPS:
+ * Se a tela for MAIOR que 600px, mudamos o layout.*/
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px; /* Trava a largura máxima no desktop */
+        margin: 40px auto; /* Centraliza */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
